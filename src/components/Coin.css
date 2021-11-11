@@ -22,6 +22,7 @@
 .coin h1 {
   font-size: 16px;
   width: 150px;
+  margin-top: 5px;
 }
 
 .coin img {
@@ -32,6 +33,7 @@
 
 .coin-symbol {
   text-transform: uppercase;
+  margin-top: 15px;
 }
 
 .coin-data {
@@ -43,18 +45,23 @@
 
 .coin-price {
   width: 110px;
+  margin-top: 15px;
 }
 
 .coin-volume {
   width: 155px;
+  margin-top: 15px;
 }
 
 .coin-marketcap {
   width: 230px;
+  margin-right: 10px;
+  margin-top: 15px;
 }
 
 .coin-percent {
   width: 100px;
+  margin-top: 15px;
 }
 
 .red {
@@ -67,6 +74,16 @@
 
 .coin-body {
   display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.coin-body-text {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.coin-chart {
+  margin: auto;
 }
