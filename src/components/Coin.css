@@ -9,7 +9,6 @@
   justify-content: start;
   align-items: center;
   height: 80px;
-  border-bottom: 1px solid #d7d7d7;
   width: 900px;
 }
 
@@ -64,4 +63,10 @@
 
 .green {
   color: #11d811;
+}
+
+.coin-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

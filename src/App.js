@@ -48,6 +48,10 @@ function App() {
             price={coin.current_price}
             priceChange={coin.price_change_percentage_24h}
             volume={coin.total_volume}
+            ath={coin.ath}
+            ath_date={coin.ath_date}
+            circulating_supply={coin.circulating_supply}
+            max_supply={coin.max_supply}
           />
         )
       })}

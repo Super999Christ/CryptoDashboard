@@ -2,12 +2,12 @@ import Accordion from 'react-bootstrap/Accordion'
 import './Coin.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap }) => {
+const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap, ath, ath_date, circulating_supply, max_supply }) => {
   return (
     <div className="coin-container">
-      <Accordion>
+      <Accordion className="coin-row">
         <Accordion.Item eventKey="0">
-          <Accordion.Header >
+          <Accordion.Header>
             <div className="coin">
               <img src={image} alt="crypto" />
               <h1>{name}</h1>
@@ -24,8 +24,10 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap }) =>
               <p className="coin-marketcap">Mkt Cap: ${marketcap.toLocaleString()}</p>
             </div>
           </Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          <Accordion.Body className="coin-body">
+            <p>All Time High: ${ath.toLocaleString()} on {ath_date.slice(0,10)}</p>
+            <p>Circulating Supply: {circulating_supply}</p>
+            <p>Max Supply: { max_supply ? max_supply : 'Not Applicable'}</p>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
