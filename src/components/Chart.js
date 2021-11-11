@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
 
-function CryptoChart() {
+function CryptoChart(props) {
   const chartOptions = {
     options: {
       chart: {
