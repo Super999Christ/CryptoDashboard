@@ -2,12 +2,21 @@ import { Accordion, Card } from 'react-bootstrap'
 import CryptoChart from './Chart'
 import './Coin.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios'
 
 const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap, ath, ath_date, circulating_supply, max_supply }) => {
 
+  const getHistData = () => {
+    axios.get(`https://api.coingecko.com/api/v3/coins/solana/market_chart?vs_currency=usd&days=30&interval=daily`)
+      .then(({ data }) => {
+        console.log(data)
+      })
+      .catch(err => console.log(err))
+  }
+
   return (
     <div className="coin-container">
-      <Accordion className="coin-row">
+      <Accordion className="coin-row" onClick={getHistData}>
         <Accordion.Item eventKey="0">
           <Card>
           <Accordion.Header>

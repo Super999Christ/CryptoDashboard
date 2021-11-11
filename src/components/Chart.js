@@ -5,15 +5,24 @@ function CryptoChart() {
   const chartOptions = {
     options: {
       chart: {
-        id: "basic-bar"
+        id: "line",
+        type: "line",
+        zoom: {
+          enabled: false
+        }
+      },
+      dataLabels: {
+        enabled: false
       },
       xaxis: {
+        // this needs to be populated with dates
         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
       }
     },
     series: [
       {
         name: "series-1",
+        // this needs to be populated with values
         data: [30, 40, 45, 50, 49, 60, 70, 91]
       }
     ]
@@ -24,8 +33,8 @@ function CryptoChart() {
       <Chart
         options={chartOptions.options}
         series={chartOptions.series}
-        type="bar"
-        width="500"
+        width="900"
+        height="300"
       />
     </div>
   )
